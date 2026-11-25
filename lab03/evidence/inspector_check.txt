@@ -1,0 +1,178 @@
+TOOL: check_stock - Check stock for ONE medicine. Use for questions like 'Do we have amoxicillin 500mg?'.
+TOOL: search_items - Search the catalogue by a word in the item name or form (e.g. 'syrup', 'tablet', 'cough').
+TOOL: list_expiring - List items that expire within the next `days` days (including already expired ones).
+TOOL: record_sale - ACTION: record a sale and REDUCE stock. Only call when the user clearly asks to sell/record a sale.
+
+check_stock({'item': 'amoxicillin', 'strength': '500mg'}) ->
+{
+  "item": "Amoxicillin",
+  "strength": "500mg",
+  "form": "capsules (pack of 21)",
+  "quantity": "40",
+  "unit_price_ghs": "35.00",
+  "expiry_date": "2027-12-30"
+}
+
+search_items({'query': 'tablet'}) ->
+{
+  "item": "Paracetamol",
+  "strength": "500mg",
+  "form": "tablets (pack of 24)",
+  "quantity": "150",
+  "unit_price_ghs": "8.00",
+  "expiry_date": "2028-07-17"
+}
+{
+  "item": "Ibuprofen",
+  "strength": "400mg",
+  "form": "tablets (pack of 24)",
+  "quantity": "60",
+  "unit_price_ghs": "12.00",
+  "expiry_date": "2027-09-21"
+}
+{
+  "item": "Artemether-Lumefantrine",
+  "strength": "20/120mg",
+  "form": "tablets (pack of 24)",
+  "quantity": "45",
+  "unit_price_ghs": "28.00",
+  "expiry_date": "2027-06-23"
+}
+{
+  "item": "Artemether-Lumefantrine",
+  "strength": "80/480mg",
+  "form": "tablets (pack of 6)",
+  "quantity": "8",
+  "unit_price_ghs": "32.00",
+  "expiry_date": "2027-01-19"
+}
+{
+  "item": "Metformin",
+  "strength": "500mg",
+  "form": "tablets (pack of 28)",
+  "quantity": "70",
+  "unit_price_ghs": "18.00",
+  "expiry_date": "2027-11-25"
+}
+{
+  "item": "Amlodipine",
+  "strength": "5mg",
+  "form": "tablets (pack of 28)",
+  "quantity": "55",
+  "unit_price_ghs": "20.00",
+  "expiry_date": "2028-04-08"
+}
+{
+  "item": "Amlodipine",
+  "strength": "10mg",
+  "form": "tablets (pack of 28)",
+  "quantity": "0",
+  "unit_price_ghs": "26.00",
+  "expiry_date": "2028-03-19"
+}
+{
+  "item": "Zinc Sulphate",
+  "strength": "20mg",
+  "form": "dispersible tablets (pack of 10)",
+  "quantity": "90",
+  "unit_price_ghs": "6.00",
+  "expiry_date": "2027-03-25"
+}
+{
+  "item": "Ciprofloxacin",
+  "strength": "500mg",
+  "form": "tablets (pack of 10)",
+  "quantity": "25",
+  "unit_price_ghs": "24.00",
+  "expiry_date": "2026-12-10"
+}
+{
+  "item": "Cetirizine",
+  "strength": "10mg",
+  "form": "tablets (pack of 10)",
+  "quantity": "80",
+  "unit_price_ghs": "7.50",
+  "expiry_date": "2027-01-23"
+}
+{
+  "item": "Vitamin C",
+  "strength": "500mg",
+  "form": "tablets (pack of 30)",
+  "quantity": "120",
+  "unit_price_ghs": "10.00",
+  "expiry_date": "2028-10-25"
+}
+{
+  "item": "Ferrous Sulphate",
+  "strength": "200mg",
+  "form": "tablets (pack of 28)",
+  "quantity": "65",
+  "unit_price_ghs": "9.00",
+  "expiry_date": "2027-02-23"
+}
+{
+  "item": "Folic Acid",
+  "strength": "5mg",
+  "form": "tablets (pack of 28)",
+  "quantity": "50",
+  "unit_price_ghs": "6.50",
+  "expiry_date": "2027-02-08"
+}
+
+list_expiring({'days': 60}) ->
+{
+  "item": "Amoxicillin",
+  "strength": "250mg",
+  "form": "capsules (pack of 21)",
+  "quantity": "12",
+  "unit_price_ghs": "22.50",
+  "expiry_date": "2027-01-09"
+}
+{
+  "item": "Paracetamol",
+  "strength": "120mg/5ml",
+  "form": "syrup (100ml)",
+  "quantity": "30",
+  "unit_price_ghs": "15.00",
+  "expiry_date": "2026-12-20"
+}
+{
+  "item": "Artemether-Lumefantrine",
+  "strength": "80/480mg",
+  "form": "tablets (pack of 6)",
+  "quantity": "8",
+  "unit_price_ghs": "32.00",
+  "expiry_date": "2027-01-19"
+}
+{
+  "item": "Oral Rehydration Salts",
+  "strength": "20.5g",
+  "form": "sachet",
+  "quantity": "200",
+  "unit_price_ghs": "2.50",
+  "expiry_date": "2026-12-25"
+}
+{
+  "item": "Ciprofloxacin",
+  "strength": "500mg",
+  "form": "tablets (pack of 10)",
+  "quantity": "25",
+  "unit_price_ghs": "24.00",
+  "expiry_date": "2026-12-10"
+}
+{
+  "item": "Cetirizine",
+  "strength": "10mg",
+  "form": "tablets (pack of 10)",
+  "quantity": "80",
+  "unit_price_ghs": "7.50",
+  "expiry_date": "2027-01-23"
+}
+{
+  "item": "Hydrocortisone",
+  "strength": "1%",
+  "form": "cream (15g)",
+  "quantity": "22",
+  "unit_price_ghs": "14.00",
+  "expiry_date": "2026-11-30"
+}
